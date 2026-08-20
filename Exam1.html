@@ -4,23 +4,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="./favicon.png" type="image/jpeg" />
+  <link rel="shortcut icon" href="/favicon.png" type="image/jpeg" />
   <title>Document</title>
-  <script src="./Angular.js"></script>
-  <link rel="stylesheet" href="./style.css" />
+  <script src="/Angular.js"></script>
+  <link rel="stylesheet" href="/style.css" />
 </head>
 
 <body>
-  <div class="container" ng-app ng-init="name='Pourya Soleimani'">
+  <div class="container" ng-app ng-init="name='Pourya Soleimani' ; number = 10">
     <div class="headTitle">
       <h1>ANGULAR.JS COURSE</h1>
     </div>
-    Name :
-    <input type="text" name="" id="" ng-model="name" placeholder="Enter your name" />
+    Name :<input type="text" name="" id="" ng-model="name" placeholder="Enter your name" />
     <br />
-    Hello {{name}}
-    <p>Hello <span ng-bind="name"></span></p>
-    sum : {{5 + 1}}
+    Hello {{name.toUpperCase()}}
+    <p>Hello <span ng-bind="name.toUpperCase()"></span></p>
+    SUM : {{5 + 1}}
+    <br>
+    NUMBER : {{number}}
   </div>
 </body>
 
