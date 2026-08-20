@@ -1,24 +1,27 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./favicon.png" type="image/jpeg" />
-    <title>Document</title>
-    <script src="./Angular.js"></script>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
 
-  <body>
-    <div class="container" ng-app>
-      <div class="headTitle">
-        <h1>ANGULAR.JS COURSE</h1>
-      </div>
-      Name :
-      <input type="text" name="" id="" ng-model="name" />
-      <br />
-      <!-- Hello {{name}} -->
-      <p>Hello <span ng-bind="name"></span></p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./favicon.png" type="image/jpeg" />
+  <title>Document</title>
+  <script src="./Angular.js"></script>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="container" ng-app ng-init="name='Pourya Soleimani'">
+    <div class="headTitle">
+      <h1>ANGULAR.JS COURSE</h1>
     </div>
-  </body>
+    Name :
+    <input type="text" name="" id="" ng-model="name" placeholder="enter your name" />
+    <br />
+    Hello {{name}}
+    <p>Hello <span ng-bind="name"></span></p>
+    sum : {{5 + 1}}
+  </div>
+</body>
+
 </html>
