@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="favicon.png" type="image/jpeg" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/jpeg" />
     <title>Document</title>
-    <script src="Angular.js"></script>
-    <link rel="stylesheet" href="style.css" />
+    <script src="./Angular.js"></script>
+    <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
     <div class="container" ng-app>
       <div class="headTitle">
@@ -16,7 +17,8 @@
       Name :
       <input type="text" name="" id="" ng-model="name" />
       <br />
-      Hello {{name}}
+      <!-- Hello {{name}} -->
+      <p>Hello <span ng-bind="name"></span></p>
     </div>
   </body>
 </html>
