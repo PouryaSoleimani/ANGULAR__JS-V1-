@@ -26,4 +26,3 @@ function MyCrtl($scope) {
     return $scope.name.toUpperCase() + " " + $scope.family.toUpperCase();
   };
 }
- 
