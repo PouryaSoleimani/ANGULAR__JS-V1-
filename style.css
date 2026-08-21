@@ -49,8 +49,10 @@ button {
     scale: 0.95;
   }
 
-  &.btn__success {
-    background-color: rgb(16, 104, 4);
+  &:disabled {
+    pointer-events: none;
+    opacity: 50;
+    cursor: not-allowed;
   }
 }
 

@@ -109,9 +109,9 @@
   <div id="EXAM__10" class="container" ng-app ng-init="count=5;price=200;">
     Count : <input type="number" ng-model="count">
     <br>
-    Sum => {{count * price}}
+    Sum => {{(count * price).toLocaleString()}} Rials
     <br>
-    <button class="btn__success">Buy</button>
+    <button ng-disabled="true" class="btn__success">Buy</button>
   </div>
 
 
