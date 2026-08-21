@@ -30,7 +30,8 @@ input {
   margin: 8px;
 }
 
-th , td {
+th,
+td {
   text-align: center;
 }
 

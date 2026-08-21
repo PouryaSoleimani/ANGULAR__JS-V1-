@@ -18,3 +18,12 @@ function MyController($scope) {
     { id: 11, firstname: "iman", lastname: "allahyari", age: 30 },
   ];
 }
+
+function MyCrtl($scope) {
+  $scope.name = "Pourya";
+  $scope.family = "Soleimani";
+  $scope.fullName = function () {
+    return $scope.name.toUpperCase() + " " + $scope.family.toUpperCase();
+  };
+}
+ 

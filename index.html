@@ -94,7 +94,15 @@
   </div> -->
 
   <!--//^ EXAM 9 -->
-  <div id="EXAM__9" class="container" ng-app ng-controller="MyController">
+  <div id="EXAM__9" class="container" ng-app ng-controller="MyCrtl">
+    Name : <input type="text" ng-model="name">
+    <br>
+    Family : <input type="text" ng-model="family">
+    <br>
+    {{name}} {{family}}
+    <br>
+    <br>
+    FULLNAME : {{fullName()}}
   </div>
 
 
