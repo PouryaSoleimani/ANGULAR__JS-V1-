@@ -49,13 +49,6 @@ button {
     scale: 0.95;
   }
 
-  &:disabled {
-    pointer-events: none;
-    opacity: 50;
-    cursor: not-allowed;
-    background-color: #ffffff10;
-  }
-
   &.success {
     background-color: rgb(11, 104, 11);
   }
@@ -63,6 +56,13 @@ button {
   &.w-full {
     width: 308px;
     margin: 12px 0;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.3;
+    cursor: not-allowed;
+    background-color: #ffffff10;
   }
 }
 
