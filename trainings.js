@@ -39,11 +39,19 @@ app.controller("AppController", function ($scope) {
   };
 });
 
+//& SAMPLE PROJECT
 var project = angular.module("ProjectModule", []);
 project.controller("ProjectController", function ($scope) {
   $scope.count = 0;
   $scope.price = 1000;
   $scope.increase = function () {
     $scope.count = $scope.count + 1;
+  };
+
+  $scope.message = "";
+  $scope.save = function () {
+    let saved = $scope.message;
+    $scope.message = "";
+    console.log("SAVED => ", saved);
   };
 });
