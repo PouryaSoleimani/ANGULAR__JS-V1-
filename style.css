@@ -3,6 +3,7 @@ body {
   color: #fafafa;
   padding: 0;
   margin: 0;
+  direction: ltr;
 
   * {
     margin: 0;
@@ -27,6 +28,14 @@ input {
   outline: 2px solid #ffffff40;
   border-radius: 4px;
   margin: 8px;
+}
+
+th , td {
+  text-align: center;
+}
+
+th {
+  background-color: #404040;
 }
 
 .container {

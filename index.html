@@ -64,14 +64,38 @@
   </div> -->
 
   <!--//^ EXAM 7 -->
-  <div id="EXAM__7" class="container" ng-app ng-controller="MyController">
+  <!-- <div id="EXAM__7" class="container" ng-app ng-controller="MyController">
     Name is {{ names[0] }}
     <ul class="names__wrapper">
       <li class="single__name" ng-repeat="n in people">
         {{n.firstname.toUpperCase()}} {{n.lastname.toUpperCase()}} . {{n.age}}
       </li>
     </ul>
+  </div> -->
+
+  <!--//^ EXAM 8 -->
+  <div id="EXAM__8" class="container" ng-app ng-controller="MyController">
+    <table class="table table-bordered">
+      <tr>
+        <th>ID</th>
+        <th class="first__th">First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+      </tr>
+
+      <tr ng-repeat="p in people">
+        <td>{{p.id}}</td>
+        <td>{{p.firstname.toUpperCase()}}</td>
+        <td>{{p.lastname.toUpperCase()}}</td>
+        <td>{{p.age}}</td>
+      </tr>
+
+
+    </table>
+    </ul>
   </div>
+
+
 </body>
 
 </html>
