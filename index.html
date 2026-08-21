@@ -76,10 +76,12 @@
   <!--//^ EXAM 8 -->
   <div id="EXAM__8" class="container" ng-app ng-controller="MyController">
 
-    <input type="text" ng-model="age__filter">
+    <input type="text" ng-model="age__filter" placeholder="Search ...">
 
     <!-- TABLE -->
     <table class="table table-bordered">
+
+      <!-- HEAD -->
       <tr>
         <th>ID</th>
         <th class="first__th">First Name</th>
@@ -87,6 +89,7 @@
         <th>Age</th>
       </tr>
 
+      <!-- BODY -->
       <tr ng-repeat="p in people | orderBy:'id'|filter:age__filter">
         <td>{{p.id}}</td>
         <td>{{p.firstname.toUpperCase()}}</td>
