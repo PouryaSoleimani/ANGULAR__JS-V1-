@@ -83,7 +83,7 @@
         <th>Age</th>
       </tr>
 
-      <tr ng-repeat="p in people">
+      <tr ng-repeat="p in people | orderBy:'-age'">
         <td>{{p.id}}</td>
         <td>{{p.firstname.toUpperCase()}}</td>
         <td>{{p.lastname.toUpperCase()}}</td>
