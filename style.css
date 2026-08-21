@@ -96,10 +96,10 @@ th {
 
 .headTitle {
   background-color: rgba(139, 0, 0, 0.748);
-  padding-inline: 8px;
-  border-radius: 8px;
-  outline: 4px solid #ffffff30;
+  padding: 16px;
   margin-bottom: 16px;
+  position: sticky;
+  inset: 0;
 }
 
 .single__name {
