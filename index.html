@@ -55,13 +55,22 @@
   </div> -->
 
   <!--//^ EXAM 6 -->
-  <div id="EXAM__6" class="container" ng-app ng-init="names=['pourya','ashkan','shahriyar']">
+  <!-- <div id="EXAM__6" class="container" ng-app ng-init="names=['pourya','ashkan','shahriyar']">
     Name is {{ names[0] }}
     <ul class="names__wrapper">
       <li class="single__name" ng-repeat="n in names">{{n.toUpperCase()}}</li>
     </ul>
-  </div>
+  </div> -->
 
+  <!--//^ EXAM 7 -->
+  <div id="EXAM__7" class="container" ng-app ng-controller="MyController">
+    Name is {{ names[0] }}
+    <ul class="names__wrapper">
+      <li class="single__name" ng-repeat="n in people">
+        {{n.firstname.toUpperCase()}} {{n.lastname.toUpperCase()}} . {{n.age}}
+      </li>
+    </ul>
+  </div>
 </body>
 
 </html>
