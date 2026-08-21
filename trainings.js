@@ -31,6 +31,19 @@ function MyCrtl($scope) {
 }
 
 var app = angular.module("appModule", []);
-app.controller('AppControllers',function($scope){
-  
-})
+app.controller("AppController", function ($scope) {
+  $scope.name = "Pourya";
+  $scope.family = "Soleimani";
+  $scope.logger = function () {
+    console.log("LOG LOG");
+  };
+});
+
+var project = angular.module("ProjectModule", []);
+project.controller("ProjectController", function ($scope) {
+  $scope.count = 0;
+  $scope.price = 1000;
+  $scope.increase = function () {
+    $scope.count = $scope.count + 1;
+  };
+});
