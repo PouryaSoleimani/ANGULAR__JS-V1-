@@ -25,4 +25,12 @@ function MyCrtl($scope) {
   $scope.fullName = function () {
     return $scope.name.toUpperCase() + " " + $scope.family.toUpperCase();
   };
+  $scope.logger = function () {
+    console.log("LOG LOG");
+  };
 }
+
+var app = angular.module("appModule", []);
+app.controller('AppControllers',function($scope){
+  
+})
