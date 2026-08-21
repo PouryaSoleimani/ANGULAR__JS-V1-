@@ -26,6 +26,8 @@ input {
   max-width: min(1440px, 95%);
   margin: 16px auto;
   padding: 0;
+  border-inline : 3px solid #ffffff40;
+  padding-inline: 12px;
 }
 
 .headTitle {
