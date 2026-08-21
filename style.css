@@ -53,6 +53,7 @@ button {
     pointer-events: none;
     opacity: 50;
     cursor: not-allowed;
+    background-color: #ffffff10;
   }
 }
 
@@ -91,4 +92,14 @@ th {
   &:hover {
     background-color: #202020;
   }
+}
+
+.error__text {
+  color: rgb(216, 60, 60);
+  text-transform: uppercase;
+  background-color: black;
+  width: fit-content;
+  padding: 4px 12px 4px 6px;
+  border-radius: 24px;
+  outline: 2px solid #ffffff10;
 }

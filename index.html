@@ -111,7 +111,8 @@
     <br>
     Sum => {{(count * price).toLocaleString()}} Rials
     <br>
-    <button ng-disabled="true" class="btn__success">Buy</button>
+    <button ng-disabled="count<1" class="btn__success">Buy</button>
+    <p class="error__text" ng-show="count < 1">⛔ Invalid Count</p>
   </div>
 
 
