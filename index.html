@@ -75,6 +75,10 @@
 
   <!--//^ EXAM 8 -->
   <div id="EXAM__8" class="container" ng-app ng-controller="MyController">
+
+    <input type="text" ng-model="age__filter">
+
+    <!-- TABLE -->
     <table class="table table-bordered">
       <tr>
         <th>ID</th>
@@ -83,7 +87,7 @@
         <th>Age</th>
       </tr>
 
-      <tr ng-repeat="p in people | orderBy:'-age'">
+      <tr ng-repeat="p in people | orderBy:'id'|filter:age__filter">
         <td>{{p.id}}</td>
         <td>{{p.firstname.toUpperCase()}}</td>
         <td>{{p.lastname.toUpperCase()}}</td>
