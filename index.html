@@ -7,11 +7,13 @@
   <link rel="shortcut icon" href="./favicon.png" type="image/jpeg" />
   <title>Angular.js Training</title>
   <script src="./Angular.js"></script>
+  <script src="./trainings.js"></script>
   <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-  <div class="container" ng-app ng-init="name='Pourya Soleimani' ; number = 10">
+  <!--//^ TEST 1 -->
+  <!-- <div class="container" ng-app ng-init="name='Pourya Soleimani' ; number = 10">
     <div class="headTitle">
       <h1>ANGULAR.JS COURSE</h1>
     </div>
@@ -22,6 +24,17 @@
     SUM : {{5 + 1}}
     <br>
     NUMBER : {{number}}
+  </div> -->
+
+
+  <div class="container" ng-app ng-controller="MyController">
+    Name : <input type="text" ng-model="name">
+    <br>
+    Family : <input type="text" ng-model="family">
+    <br>
+    HELLO {{ name + " " +  family }}
+
+    
   </div>
 </body>
 
