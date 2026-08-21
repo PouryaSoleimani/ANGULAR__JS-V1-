@@ -13,7 +13,7 @@
 
 <body>
   <!--//^ TEST 1 -->
-  <!-- <div class="container" ng-app ng-init="name='Pourya Soleimani' ; number = 10">
+  <!-- <div id="EXAM__1" class="container" ng-app ng-init="name='Pourya Soleimani' ; number = 10">
     <div class="headTitle">
       <h1>ANGULAR.JS COURSE</h1>
     </div>
@@ -27,15 +27,21 @@
   </div> -->
 
 
-  <div class="container" ng-app ng-controller="MyController">
+  <!-- <div id="EXAM__2" class="container" ng-app ng-controller="MyController">
     Name : <input type="text" ng-model="name">
     <br>
     Family : <input type="text" ng-model="family">
     <br>
-    HELLO {{ name + " " +  family }}
+    HELLO {{ name + " " + family }}
+  </div> -->
 
-    
+  <div class="container" id="EXAM__3" ng-app ng-init="count=5;price=1220">
+    Count is <input type="number" name="" id="" ng-model="count">
+    <br>
+    Sum : {{ count * price }}
   </div>
+
+
 </body>
 
 </html>
