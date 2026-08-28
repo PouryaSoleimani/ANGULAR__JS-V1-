@@ -42,9 +42,13 @@ input {
   color: var(--foreground);
   padding: 4px 8px;
   border: none;
-  outline: 2px solid var(--border);
   border-radius: 4px;
   margin: 8px;
+  box-sizing: content-box;
+
+  &:focus {
+    outline: 2px solid var(--foreground);
+  }
 }
 
 button {
