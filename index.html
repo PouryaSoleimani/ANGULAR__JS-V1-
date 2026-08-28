@@ -182,7 +182,8 @@
     </div>
 
     <div class="products__wrapper">
-      <div class="single__product {{item.isDone && 'green'}}" ng-repeat="item in products  | filter : product__filter">
+      <div class="single__product {{item.isDone && 'green'}}"
+        ng-repeat="item in products | orderBy:'id'  | filter : product__filter">
         {{item.id}}.{{item.title}}
       </div>
     </div>
