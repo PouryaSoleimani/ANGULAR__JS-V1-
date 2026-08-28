@@ -1,3 +1,7 @@
+:root {
+  --border: #ffffff20;
+}
+
 body {
   background-color: #101010;
   color: #fafafa;
@@ -87,10 +91,16 @@ th {
 }
 
 .container {
-  max-width: min(1440px, 95%);
+  max-width: min(1024px, 95%);
   margin: 16px auto;
-  padding: 0;
-  border-inline: 2px solid #ffffff40;
+  padding: 8px;
+  border-radius: 20px;
+  background-color: #191919;
+  min-height: 80dvh;
+  max-height: 80dvh;
+  overflow-y: auto;
+  scrollbar-width: none;
+  border: 2px solid #ffffff40;
   padding-inline: 12px;
 }
 
@@ -122,4 +132,26 @@ th {
   padding: 4px 12px 4px 6px;
   border-radius: 24px;
   outline: 2px solid #ffffff10;
+}
+
+.input__wrapper {
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.results__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 8px;
+  border-bottom: 2px solid var(--border);
+}
+
+.result__item {
+  background-color: black;
+  width: fit-content;
+  width: -webki-fit-content;
+  padding: 4px 8px;
+  border-radius: 6px;
+  outline: 2px solid var(--border);
 }
