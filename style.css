@@ -43,11 +43,14 @@ input {
   padding: 4px 8px;
   border: none;
   border-radius: 4px;
-  margin: 8px;
   box-sizing: content-box;
 
   &:focus {
     outline: 2px solid var(--foreground);
+  }
+
+  &.error {
+    outline: 2px solid var(--destructive);
   }
 }
 
@@ -57,9 +60,8 @@ button {
   background-color: var(--background);
   color: var(--foreground);
   padding: 6px 24px;
-  border-radius: 24px;
+  border-radius: 6px;
   text-transform: uppercase;
-  margin: 8px;
 
   &:active {
     scale: 0.95;
@@ -191,12 +193,17 @@ th {
   z-index: 0;
   padding-block: 24px;
 
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
   .modal__content {
     min-width: 300px;
-    min-height: 400px;
+    min-height: 180px;
     background-color: var(--secondary-background);
     outline: 6px solid var(--border);
-    border-radius: 24px;
+    border-radius: 16px;
     z-index: 1;
   }
 
@@ -213,9 +220,26 @@ th {
     }
   }
 
-  &.active {
-    opacity: 1;
-    pointer-events: all;
+  .modal__body {
+    padding: 16px;
+  }
+
+  .login__body {
+    display: grid;
+    gap: 16px;
+  }
+}
+
+.user__info {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-inline: 8px;
+  pointer-events: none;
+  cursor: default;
+  user-select: none;
+  i {
+    font-size: 20px;
   }
 }
 

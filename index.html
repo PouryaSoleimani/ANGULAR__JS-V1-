@@ -20,7 +20,11 @@
   <div class="headTitle">
     <h1>ANGULAR.JS COURSE</h1>
     <div class="btns__wrapper">
-      <button class="icon pill" id="login__btn" ng-click="loginHandler()">
+      <button role="div" class="user__info" ng-show="isUserLoggedIn">
+        <i class="ph-fill ph-user"></i>
+        <p>{{username}}</p>
+      </button>
+      <button class="icon pill" id="login__btn" ng-click="loginModalHandler()">
         <i class="ph-fill ph-key"></i>
       </button>
 
@@ -37,6 +41,11 @@
         <button class="icon md destructive" id="close__login__modal">
           <i class="ph ph-x"></i>
         </button>
+      </div>
+      <div class="modal__body login__body">
+        <input type="text" ng-model="username" placeholder="Username">
+        <input type="password" ng-model="password" placeholder="password">
+        <button ng-click="loginHandler()">LOGIN</button>
       </div>
     </div>
   </div>

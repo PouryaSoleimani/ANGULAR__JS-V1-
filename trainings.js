@@ -1,6 +1,10 @@
 function MyController($scope) {
   $scope.name = "Pourya";
   $scope.family = "Soleimani";
+  $scope.isUserLoggedIn = false;
+  $scope.username = ""
+  $scope.password = ""
+  $scope.loginModal = document.querySelector(".login__modal");
 
   $scope.themeToggle = function () {
     const i = document.querySelector("#theme__btn i");
@@ -13,29 +17,35 @@ function MyController($scope) {
     }
   };
 
-  $scope.loginHandler = function () {
-    const loginModal = document.querySelector(".login__modal");
+  $scope.loginModalHandler = function () {
+
     const loginModalOpenBtn = document.querySelector("#login__btn");
     const loginModalCloseBtn = document.querySelector("#close__login__modal");
+
     loginModalOpenBtn.addEventListener("click", () => {
-      loginModal.classList.add("active");
-    });
-    loginModalCloseBtn.addEventListener("click", () => {
-      loginModal.classList.remove("active");
+      $scope.loginModal.classList.add("active");
     });
 
-    loginModal.addEventListener("click", (e) => {
-      e.stopPropagation()
-      console.log(e.target);
-      if (e.target.classList.contains("modal__content")) {
-        return;
-      } else {
-        loginModal.classList.remove("active");
-      }
-    },
-      { capture: true },
-    );
+    loginModalCloseBtn.addEventListener("click", () => {
+      $scope.loginModal.classList.remove("active");
+    });
   };
+
+  $scope.loginHandler = function () {
+    if ($scope.name.length == 0 || $scope.username.length == 0) {
+      console.error('⛔ form validation failed')
+      document.querySelector('.login__body').querySelectorAll('input').forEach(item => {
+        item.classList.add('error')
+        setTimeout(() => {
+          item.classList.remove('error')
+        }, 1000);
+      })
+      return
+    }
+    $scope.isUserLoggedIn = true
+    $scope.loginModal.classList.remove('active')
+
+  }
 }
 
 // function MyController($scope) {
