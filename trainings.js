@@ -1,6 +1,41 @@
 function MyController($scope) {
   $scope.name = "Pourya";
   $scope.family = "Soleimani";
+
+  $scope.themeToggle = function () {
+    const i = document.querySelector("#theme__btn i");
+    if (i.classList.contains("ph-moon")) {
+      i.className = "ph-fill ph-sun";
+      document.body.className = "light";
+    } else {
+      i.className = "ph-fill ph-moon";
+      document.body.className = "dark";
+    }
+  };
+
+  $scope.loginHandler = function () {
+    const loginModal = document.querySelector(".login__modal");
+    const loginModalOpenBtn = document.querySelector("#login__btn");
+    const loginModalCloseBtn = document.querySelector("#close__login__modal");
+    loginModalOpenBtn.addEventListener("click", () => {
+      loginModal.classList.add("active");
+    });
+    loginModalCloseBtn.addEventListener("click", () => {
+      loginModal.classList.remove("active");
+    });
+
+    loginModal.addEventListener("click", (e) => {
+      e.stopPropagation()
+      console.log(e.target);
+      if (e.target.classList.contains("modal__content")) {
+        return;
+      } else {
+        loginModal.classList.remove("active");
+      }
+    },
+      { capture: true },
+    );
+  };
 }
 
 // function MyController($scope) {

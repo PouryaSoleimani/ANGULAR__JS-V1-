@@ -8,17 +8,41 @@
   <title>Angular.js Training</title>
   <script src="./Angular.js"></script>
   <script src="./trainings.js"></script>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
   <link rel="stylesheet" href="./bootstrap-rtl.css" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 
-<body>
+<body ng-app ng-controller="MyController">
   <div class="headTitle">
     <h1>ANGULAR.JS COURSE</h1>
+    <div class="btns__wrapper">
+      <button class="icon pill" id="login__btn" ng-click="loginHandler()">
+        <i class="ph-fill ph-key"></i>
+      </button>
+
+      <button class="icon pill" id="theme__btn" ng-click="themeToggle()">
+        <i class="ph-fill ph-sun"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="modal login__modal">
+    <div class="modal__content">
+      <div class="modal__header">
+        <h3>LOGIN</h3>
+        <button class="icon md destructive" id="close__login__modal">
+          <i class="ph ph-x"></i>
+        </button>
+      </div>
+    </div>
   </div>
 
   <!--//^ EXAM 1 -->
-  <div id="EXAM__1" class="container" ng-app ng-init="name='Pourya Soleimani' ; number = 10">
+  <div id="EXAM__1" class="container" ng-init="name='Pourya Soleimani' ; number = 10">
     <div class="input__wrapper">
       Name :<input type="text" ng-model="name" placeholder="Enter your name" />
     </div>
