@@ -7,12 +7,12 @@ function MyController($scope) {
   $scope.loginModal = document.querySelector(".login__modal");
 
   $scope.products = [
-    { id: 1, title: 'IPHONE__14PROMAX' },
-    { id: 2, title: 'MONITOR__49INCH' },
-    { id: 3, title: 'AIRPOD__4' },
-    { id: 4, title: 'APPLE__WATCH' },
-    { id: 5, title: 'MOTOR__CLICK' },
-    { id: 6, title: 'MACBOOK__PRO' },
+    { id: 1, title: 'IPHONE__14PROMAX', isDone: false },
+    { id: 2, title: 'MONITOR__49INCH', isDone: false },
+    { id: 3, title: 'AIRPOD', isDone: true },
+    { id: 4, title: 'APPLE__WATCH', isDone: false },
+    { id: 5, title: 'MOTOR__CLICK', isDone: false },
+    { id: 6, title: 'MACBOOK__PRO', isDone: false },
   ]
 
   $scope.people = [

@@ -110,7 +110,7 @@
   </div> -->
 
   <!--//^ EXAM 8 -->
-  <div class="container">
+  <!-- <div class="container">
     <div class="input__wrapper">
       <input type="text" ng-model="name__filter" placeholder="Search ...">
     </div>
@@ -129,7 +129,7 @@
       </tr>
     </table>
     </ul>
-  </div>
+  </div> -->
 
   <!--//^ EXAM 9 -->
   <!-- <div class="container" ng-app ng-controller="MyCrtl">
@@ -176,12 +176,16 @@
   </div> -->
 
   <!--//^ EXAM 13 -->
-  <!-- <div class="container">
+  <div class="container">
+    <div class="input__wrapper">
+      <input type="text" placeholder="Search" ng-model="product__filter">
+    </div>
+
     <div class="products__wrapper">
-      <div class="single__product" ng-repeat="item in products track by $index">
+      <div class="single__product {{item.isDone && 'green'}}" ng-repeat="item in products  | filter : product__filter">
         {{item.id}}.{{item.title}}
       </div>
-    </div> -->
+    </div>
 
   </div>
 
