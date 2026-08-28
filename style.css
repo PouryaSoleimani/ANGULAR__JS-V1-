@@ -134,13 +134,18 @@ textarea {
   margin: 8px 0;
 }
 
+table {
+  margin-top: 16px;
+  border-radius: 24px;
+}
+
 th,
 td {
   text-align: center;
 }
 
 th {
-  background-color: #404040;
+  background-color: var(--background);
 }
 
 .container {
