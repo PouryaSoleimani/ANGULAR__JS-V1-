@@ -102,10 +102,11 @@ project.controller("ProjectController", function ($scope) {
 
   $scope.message = "";
   $scope.save = function () {
+
     if ($scope.message.length < 1) {
       throw new Error("TextArea is Empty");
-      return;
     }
+
     let saved = $scope.message;
     $scope.message = "";
     console.log("SAVED => ", saved);
