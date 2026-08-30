@@ -4,6 +4,7 @@
   --border: #2524243b;
   --secondary-background: #fff;
   --destructive: rgb(194, 52, 52);
+  --blue: #6495ed;
 }
 
 body {
@@ -43,6 +44,7 @@ input {
   padding: 4px 8px;
   border: none;
   border-radius: 4px;
+  height: 24px;
   box-sizing: content-box;
 
   &:focus {
@@ -59,8 +61,9 @@ button {
   outline: 2px solid #ffffff30;
   background-color: var(--background);
   color: var(--foreground);
-  padding: 6px 24px;
+  padding: 0 24px;
   border-radius: 6px;
+  height: 34px;
   text-transform: uppercase;
 
   &:active {
@@ -120,6 +123,11 @@ button {
     i {
       font-size: 14px;
     }
+  }
+
+  &.blue {
+    background-color: var(--blue);
+    color: white;
   }
 }
 
@@ -298,6 +306,7 @@ th {
   gap: 16px;
   place-items: center;
   padding: 16px;
+  border-bottom: 3px solid var(--border);
 }
 
 .single__product {
@@ -318,4 +327,8 @@ th {
   &.green {
     outline-color: rgb(47, 155, 47);
   }
+}
+
+.add__product {
+  padding: 12px;
 }

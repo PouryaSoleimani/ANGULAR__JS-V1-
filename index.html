@@ -64,7 +64,7 @@
   </div> -->
 
   <!--//^ EXAM 2 -->
-  <!-- <div class="container" ng-controller="MyController">
+  <!-- <div class="container">
     Name : <input type="text" ng-model="name">
     <br>
     Family : <input type="text" ng-model="family">
@@ -187,6 +187,11 @@
         {{item.id}}.{{item.title}}
       </div>
     </div>
+
+    <form class="add__product">
+      <input type="text" ng-model="productName" placeholder="Enter Product Name">
+      <button ng-disabled="productName.length == 0" ng-click="logProductName()" class="blue">ADD</button>
+    </form>
 
   </div>
 

@@ -5,6 +5,9 @@ function MyController($scope) {
   $scope.username = ""
   $scope.password = ""
   $scope.loginModal = document.querySelector(".login__modal");
+  $scope.productName = "";
+
+
 
   $scope.products = [
     { id: 1, title: 'IPHONE__14PROMAX', isDone: false },
@@ -68,6 +71,10 @@ function MyController($scope) {
     $scope.isUserLoggedIn = true
     $scope.loginModal.classList.remove('active')
 
+  }
+
+  $scope.logProductName = function () {
+    console.log({ name: $scope.productName })
   }
 }
 
