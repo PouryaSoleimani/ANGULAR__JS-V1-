@@ -6,8 +6,8 @@ function MyController($scope) {
   $scope.password = ""
   $scope.loginModal = document.querySelector(".login__modal");
   $scope.productName = "";
-
-
+  $scope.toast = document.querySelector('.toast')
+  $scope.toastText = $scope.toast.querySelector('p')
 
   $scope.products = [
     { id: 1, title: 'IPHONE__14PROMAX', isDone: false },
@@ -74,7 +74,33 @@ function MyController($scope) {
   }
 
   $scope.logProductName = function () {
-    console.log({ name: $scope.productName })
+
+    const toastHandler = () => {
+      $scope.toast.classList.add('active')
+      $scope.toast.classList.add('success')
+      $scope.toastText.textContent = "Product Added Successfully"
+
+      setTimeout(() => {
+        $scope.toast.classList.remove('active')
+      }, 1500);
+
+      setTimeout(() => {
+        $scope.toast.classList.remove('success')
+        $scope.toastText.textContent = "";
+      }, 2000);
+    }
+
+    if ($scope.productName.length) {
+      toastHandler();
+      const object = {
+        id: $scope.products.length + 1,
+        title: $scope.productName.toUpperCase(),
+        isDone: false
+      }
+
+      $scope.products.push(object)
+      console.log({ products: $scope.products })
+    }
   }
 }
 
